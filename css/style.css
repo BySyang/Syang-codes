@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*  HTML5 video标签的poster图片填充整个标签区域*/
+
+video {
+    object-fit: fill;
+}
+
+/* 单行文本溢出显示省略号 */
+
+.on-line-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 多行文本溢出显示省略号 */
+
+.more-line-ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /*显示行数*/
+    overflow: hidden;
+}
+
+/* 未知宽度定位元素居中 */
+
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%,50%);
+}
+
+/* 文字颜色渐变 */
+div{
+    background-image: -webkit-gradient(linear, left 0, right 0, from(rgb(4, 94, 170)), to(rgb(1, 152, 216)));
+    -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+    background-clip:text;
+    -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}
+
+/* 三角形 */
+
+.triangle{
+	width: 0;
+	height: 0;
+	border: 20px solid;
+	border-color: red transparent transparent transparent;
+}
+
